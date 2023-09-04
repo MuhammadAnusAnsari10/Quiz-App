@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes</title>
+</head>
+
+<body>
+
+    <script>
+
+        var input = prompt("Please Enter your Name ?")
+        var feedback = confirm(`${input} Are You Ready For The Quizzes About Pakistan?`)
+
+        if (feedback == true) {
+
+            var data = [
+
+                ["Which country is known as the 'Land of the Pure'?",
+                    "Pakistan", "India", "Bangladesh", "Afghanistan", "Pakistan"],
+
+                ["Which Pakistani city is famous for its historic Khyber Pass?",
+                    "Islamabad", "Lahore", "Peshawar", "Quetta", "Peshawar"],
+
+                ["Who is the founder of Pakistan?",
+                    "Jawaharlal Nehru", "Muhammad Ali Jinnah", "Mahatma Gandhi", "Liaquat Ali Khan", "Muhammad Ali Jinnah"],
+
+                ["Which Pakistani music legend was known as the 'King of Ghazal'?",
+                    "Mehdi Hassan", "Nusrat Fateh Ali Khan", "Abida Parveen", "Rahat Fateh Ali Khan", "Mehdi Hassan"],
+
+                ["Which is the highest mountain peak in Pakistan?",
+                    "Nanga Parbat", " K2", "Gasherbrum I", "Broad Peak", "K2"],
+
+                ["Which river is known as the 'Lifeline of Pakistan'?",
+                    "Jhelum River", "Ravi River", "Indus River", "Chenab River", "Indus River"],
+
+                ["Which city is considered the cultural capital of Pakistan?",
+                    "Lahore", " Karachi", "Islamabad", "Peshawar", "Lahore"],
+
+                ["Which famous archaeological site in Pakistan is known as the 'Mound of the Dead'?",
+                    "Harappa", "Taxila", "Mohenjo-daro", "Makli Necropolis", "Mohenjo-daro"],
+
+                ["Which Pakistani cricketer has the most international centuries in all formats of the game?",
+                    "Javed Miandad", "Inzamam-ul-Haq", "Shahid Afridi", "Younis Khan", "Younis Khan"],
+
+                ["Which Pakistani musician is known as the 'Magician of the Strings'?",
+                    "Atif Aslam", "Rahat Fateh Ali Khan", "Ali Zafar", "Nusrat Fateh Ali Khan", "Nusrat Fateh Ali Khan"],
+
+                ["Which city is known as the 'City of Light' in Pakistan?",
+                    "Islamabad", "Lahore", "Karachi", "Peshawar", "Karachi"],
+
+                ["Which Pakistani philanthropist founded the Edhi Foundation, one of the world's largest welfare organizations?",
+                    "Abdul Sattar Edhi", "Imran Khan", "Bilquis Edhi", "Malala Yousafzai", "Abdul Sattar Edhi"
+                ],
+
+                ["Which Pakistani cricketer has scored the most centuries in One Day Internationals (ODIs)?",
+                    "Mohammad Yousuf", "Saeed Anwar", "Inzamam-ul-Haq", "Babar Azam", "Babar Azam"],
+
+                ["Pakistan shares its longest border with which neighboring country?",
+                    "Iran", "India", "China", "Afghanistan", "India"],
+
+                ["Which Pakistani city is known for its famous PIA (Pakistan International Airlines) headquarters building, known as the PIA Tower?",
+                    "Islamabad", "Lahore", "Rawalpindi", "Karachi", "Karachi"],
+
+                ["Who is the current President of Pakistan as of 2023?",
+                    "Mamnoon Hussain", "Arif Alvi", "Asif Ali Zardari", "Pervez Musharraf", "Arif Alvi"],
+
+                ["What is the national flower of Pakistan?",
+                    "Jasmine", " Rose", "Tulip", "Sunflower", "Jasmine"],
+
+                ["Which Pakistani actress won an Academy Award for Best Supporting Actress in 2021?",
+                    " Mehwish Hayat", "Sharmeen Obaid-Chinoy", "Mahira Khan", "Saba Qamar", "Sharmeen Obaid-Chinoy"],
+
+                ["Which Pakistani province is the largest in terms of area?",
+                    "Punjab", " Sindh", " Balochistan", "Khyber Pakhtunkhwa", " Balochistan"],
+
+                ["Which Pakistani scientist is known as the 'Father of Pakistan's Nuclear Program'?",
+                    "Atta-ur-Rahman", "Abdus Salam", "Pervez Hoodbhoy", "Abdul Qadeer Khan", " Abdul Qadeer Khan"],
+
+            ];
+
+            var result = 0
+            for (i = 0; i < data.length; i++) {
+                var answer = prompt(`Question : ${data[i][0]} \n 1 : ${data[i][1]} \n 2 : ${data[i][2]} \n 3 : ${data[i][3]}  \n 4 : ${data[i][4]}`)
+                if (data[i][answer] == data[i][5]) {
+                    result++;
+                }
+            }
+            if (result >= 15) {
+                var input = alert(`congratulations ${input} you passed the quizzes`)
+                document.write("<img src = '../images/congrats.png' width = '50%'>")
+            }
+            else if (result < 15) {
+                alert(`${input} You Are Fail In The Quizzes`)
+                document.write("<img src = '../images/fail.jpg' width = '50%'>")
+            }
+            document.write("<br>" + `${result} out of 20`)
+        }
+        else if (feedback == false) {
+            confirm(`${input} You Are Not Intersted In The Quizzes ?`);
+             window.close() 
+            }
+        
+</script>
+</body>
+
+</html>
